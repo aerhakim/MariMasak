@@ -5,6 +5,8 @@ Data yang ditampilkan di dalam aplikasi Mari Masak di ambil dari situs www.masak
 Aplikasi masah dalam tahap pengembangan, di bawah ini adalah preview dari Home Fragment.
 # Preview Home Fragment
 
+https://user-images.githubusercontent.com/79903756/145663130-adfcc356-28c7-4c31-a465-efe2333d071b.mp4
+
 # Credit
 ```
 Azhari Muhammad M <azhari.marzan@gmail.com>
