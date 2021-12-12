@@ -22,7 +22,6 @@ import io.github.aerhakim.marimasak.activity.DetailResepActivity;
 import io.github.aerhakim.marimasak.models.Recipe;
 
 
-
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
 
     List<Recipe> recipeList;
@@ -43,20 +42,20 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.recipeId.setText(recipeList.get(position).getId());
-        holder.resiceServings.setText(recipeList.get(position).getServings());
+        holder.recipeKey.setText(recipeList.get(position).getKey());
+        holder.resicePortion.setText(recipeList.get(position).getPortion());
         holder.recipeTitle.setText(recipeList.get(position).getTitle());
-        holder.recipeTime.setText(recipeList.get(position).getTime());
-        holder.recipeDifficulty.setText(recipeList.get(position).getDifficulty());
+        holder.recipeTimes.setText(recipeList.get(position).getTimes());
+//        holder.recipeDifficulty.setText(recipeList.get(position).getDificulty());
+        Glide.with(holder.itemView.getContext())
+                .load(recipeList.get(position).getThumb())
+                .apply(new RequestOptions().override(200, 300))
+                .into(holder.recipeThumb);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent mIntent = new Intent(view.getContext(), DetailResepActivity.class);
-                mIntent.putExtra("id", recipeList.get(position).getId());
-                mIntent.putExtra("servings", recipeList.get(position).getServings());
-                mIntent.putExtra("title", recipeList.get(position).getTitle());
-                mIntent.putExtra("time", recipeList.get(position).getTime());
-                mIntent.putExtra("difficulty", recipeList.get(position).getDifficulty());
+                mIntent.putExtra("key", recipeList.get(position).getKey());
                 view.getContext().startActivity(mIntent);
             }
         });
@@ -69,14 +68,16 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView recipeId,resiceServings, recipeTitle, recipeTime, recipeDifficulty;
+        TextView recipeKey,resicePortion, recipeTitle, recipeTimes, recipeDifficulty;
+        ImageView recipeThumb;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            recipeId=itemView.findViewById(R.id.tv_id);
-            resiceServings=itemView.findViewById(R.id.tv_porsi);
+            recipeKey=itemView.findViewById(R.id.tv_id);
+            resicePortion=itemView.findViewById(R.id.tv_porsi);
             recipeTitle=itemView.findViewById(R.id.tv_judul);
-            recipeTime=itemView.findViewById(R.id.tv_waktu);
+            recipeTimes=itemView.findViewById(R.id.tv_waktu);
             recipeDifficulty=itemView.findViewById(R.id.tv_kesulitan);
+            recipeThumb=itemView.findViewById(R.id.iv_cover);
         }
     }
 }

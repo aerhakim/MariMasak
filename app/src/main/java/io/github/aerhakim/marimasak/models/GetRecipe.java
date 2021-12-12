@@ -6,7 +6,7 @@ import java.util.List;
 
 public class GetRecipe {
 
-    @SerializedName("data")
+    @SerializedName("results")
     List<Recipe> recipeList;
     String error;
 

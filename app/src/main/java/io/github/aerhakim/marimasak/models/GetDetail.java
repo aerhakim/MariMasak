@@ -4,19 +4,19 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class GetCategory {
+public class GetDetail {
 
     @SerializedName("results")
-    List<Category> categoryList;
+    List<Detail> detailList;
     String error;
 
-    public GetCategory(List<Category> categoryList, String error) {
-        this.categoryList = categoryList;
+    public GetDetail(List<Detail> detailList, String error) {
+        this.detailList = detailList;
         this.error = error;
     }
 
-    public List<Category> getCategoryList() {
-        return categoryList;
+    public List<Detail> getDetailList() {
+        return detailList;
     }
 
     public String getError() {

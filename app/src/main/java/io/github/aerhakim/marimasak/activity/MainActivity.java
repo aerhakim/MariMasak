@@ -2,7 +2,9 @@ package io.github.aerhakim.marimasak.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
@@ -15,6 +17,7 @@ import io.github.aerhakim.marimasak.fragment.SettingFragment;
 
 public class MainActivity extends AppCompatActivity {
     ChipNavigationBar chipNavigationBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new HomeFragment();
                         break;
 
-                    case  R.id.category:
+                    case R.id.category:
                         fragment = new CategoryFragment();
                         break;
 

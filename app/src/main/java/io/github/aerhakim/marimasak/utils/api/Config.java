@@ -11,8 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Config {
 
 
-    private static String BASE_URL="https://api-food-recipev2.herokuapp.com/";
-//    public static final String IMAGES_URL = "https://testfintech.000webhostapp.com/gambar/";
+    public static String BASE_URL="https://masak-apa-tomorisakura.vercel.app/api/";
     private static Config config;
     private static Retrofit retrofit;
 

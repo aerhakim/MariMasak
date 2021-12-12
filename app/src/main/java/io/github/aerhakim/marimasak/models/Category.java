@@ -1,26 +1,22 @@
 package io.github.aerhakim.marimasak.models;
 
 public class Category {
-    String categoryId,categoryName;
+    String category, key;
 
-    public Category(String categoryId, String categoryName) {
-        this.categoryId = categoryId;
-        this.categoryName = categoryName;
+    public String getCategory() {
+        return category;
     }
 
-    public String getCategoryId() {
-        return categoryId;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
-    public void setCategoryId(String categoryId) {
-        this.categoryId = categoryId;
+    public String getKey() {
+        return key;
     }
 
-    public String getCategoryName() {
-        return categoryName;
+    public void setKey(String key) {
+        this.key = key;
     }
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
 }

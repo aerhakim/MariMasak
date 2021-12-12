@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import io.github.aerhakim.marimasak.R;
+import io.github.aerhakim.marimasak.activity.CategoryActivity;
 import io.github.aerhakim.marimasak.activity.DetailResepActivity;
 import io.github.aerhakim.marimasak.models.Category;
 
@@ -39,14 +40,14 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.categoryId.setText(categoryList.get(position).getCategoryId());
-        holder.categoryName.setText(categoryList.get(position).getCategoryName());
+        holder.categoryId.setText(categoryList.get(position).getKey());
+        holder.categoryName.setText(categoryList.get(position).getCategory());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mIntent = new Intent(view.getContext(), DetailResepActivity.class);
-                mIntent.putExtra("id", categoryList.get(position).getCategoryId());
-                mIntent.putExtra("servings", categoryList.get(position).getCategoryName());
+                Intent mIntent = new Intent(view.getContext(), CategoryActivity.class);
+                mIntent.putExtra("key", categoryList.get(position).getKey());
+                mIntent.putExtra("category", categoryList.get(position).getCategory());
                 view.getContext().startActivity(mIntent);
             }
         });

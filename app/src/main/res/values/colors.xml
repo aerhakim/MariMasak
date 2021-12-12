@@ -12,4 +12,5 @@
     <color name="gray">#b8b9bb</color>
     <color name="shimmer_placeholder">#dddddd</color>
     <color name="shimmer_dark">#BABABA</color>
+    <color name="soft_purple">#453E7E</color>
 </resources>
