@@ -9,8 +9,8 @@ https://user-images.githubusercontent.com/79903756/145663130-adfcc356-28c7-4c31-
 
 # Credit
 ```
-Ekik A <github.com/omorisakura>
-GitHub Repository: https://github.com/tomorisakura/unofficial-masakapahariini-api <unofficial-masakapahariini-api>
+Ekik A <github.com/omorisakura> (unofficial-masakapahariini-api)
+GitHub Repository: https://github.com/tomorisakura/unofficial-masakapahariini-api 
 ```
 
 # License
