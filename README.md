@@ -9,8 +9,8 @@ https://user-images.githubusercontent.com/79903756/145663130-adfcc356-28c7-4c31-
 
 # Credit
 ```
-Azhari Muhammad M <azhari.marzan@gmail.com>
-GitHub Repository: https://github.com/azharimm/food-recipe-api <Food Recipe API>
+Ekik A <github.com/omorisakura>
+GitHub Repository: https://github.com/tomorisakura/unofficial-masakapahariini-api <unofficial-masakapahariini-api>
 ```
 
 # License
