@@ -90,6 +90,8 @@ public class HomeFragment extends Fragment {
 
                 if(response.isSuccessful()){
 
+
+
                     categoryList = response.body().getCategoryList();
                     recyclerView2.setAdapter(new CategoryAdapter(getActivity(), categoryList));
                     shimmerFrameLayout2.startShimmer();

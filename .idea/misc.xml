@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/drawable-v24/ic_back.xml" value="0.325" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/drawable/bg_button.xml" value="0.2777777777777778" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/drawable/bg_contenttrans_radius.xml" value="0.29259259259259257" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/drawable/bg_contenttrans_radius_dark.xml" value="0.2777777777777778" />
@@ -18,6 +19,7 @@
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/bahan_item.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/bg_black_transparan.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/category_item.xml" value="0.5" />
+        <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/cover_category_item.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/cover_item.xml" value="0.5" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/fragment_detail.xml" value="0.302536231884058" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/fragment_home.xml" value="0.25" />
@@ -25,6 +27,7 @@
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/rv_detail.xml" value="0.302536231884058" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/shimmer_cat_item.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/shimmer_cover_item.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/shimmer_detail.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/toolbar.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/menu/main.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/menu/navigation.xml" value="0.35104166666666664" />

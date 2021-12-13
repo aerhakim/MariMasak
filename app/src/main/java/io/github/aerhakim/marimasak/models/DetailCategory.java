@@ -1,6 +1,6 @@
 package io.github.aerhakim.marimasak.models;
 
-public class Recipe {
+public class DetailCategory {
 
 
     String title, thumb, key, times, portion, dificulty;
