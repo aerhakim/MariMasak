@@ -86,7 +86,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="10dp"
                 android:backgroundTint="@color/primaryDark"
-                android:src="@drawable/ic_favourite" />
+                android:src="@drawable/ic_favourite"
+                app:tint="@color/white" />
         </LinearLayout>
 
         <LinearLayout

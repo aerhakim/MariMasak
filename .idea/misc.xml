@@ -11,9 +11,10 @@
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/drawable/bg_shimmer_dark.xml" value="0.287962962962963" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/drawable/bg_softgreen_radius.xml" value="0.29259259259259257" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/drawable/ic_arrow_right.xml" value="0.2777777777777778" />
+        <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/drawable/ic_backk.xml" value="0.2109375" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/drawable/ic_favourite.xml" value="0.29259259259259257" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/drawable/ic_share.xml" value="0.2777777777777778" />
-        <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/activity_category.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/activity_category.xml" value="0.25" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/activity_detail_resep.xml" value="0.25" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/activity_main.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/bahan_item.xml" value="0.35104166666666664" />
@@ -23,11 +24,13 @@
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/cover_item.xml" value="0.5" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/fragment_detail.xml" value="0.302536231884058" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/fragment_save.xml" value="0.21798188874514876" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/fragment_setting.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/rv_detail.xml" value="0.302536231884058" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/shimmer_cat_item.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/shimmer_cover_item.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/shimmer_detail.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/shimmer_detail_cover_category.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/layout/toolbar.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/menu/main.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/MariMasak/app/src/main/res/menu/navigation.xml" value="0.35104166666666664" />

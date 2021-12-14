@@ -56,7 +56,12 @@ public class DetailCategoryAdapter extends RecyclerView.Adapter<DetailCategoryAd
             @Override
             public void onClick(View view) {
                 Intent mIntent = new Intent(view.getContext(), DetailResepActivity.class);
-                mIntent.putExtra("key", detailCategoryList.get(position).getKey());
+                mIntent.putExtra("kunci", detailCategoryList.get(position).getKey());
+                mIntent.putExtra("thumb", detailCategoryList.get(position).getThumb());
+                mIntent.putExtra("title", detailCategoryList.get(position).getTitle());
+                mIntent.putExtra("times", detailCategoryList.get(position).getTimes());
+                mIntent.putExtra("portion", detailCategoryList.get(position).getPortion());
+                mIntent.putExtra("dificulty", detailCategoryList.get(position).getDificulty());
                 view.getContext().startActivity(mIntent);
             }
         });

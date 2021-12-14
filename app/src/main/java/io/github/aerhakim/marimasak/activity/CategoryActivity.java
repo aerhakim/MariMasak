@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +20,7 @@ import java.util.List;
 import io.github.aerhakim.marimasak.R;
 import io.github.aerhakim.marimasak.adapter.DetailCategoryAdapter;
 import io.github.aerhakim.marimasak.adapter.RecipeAdapter;
+import io.github.aerhakim.marimasak.database.AppDatabase;
 import io.github.aerhakim.marimasak.models.Category;
 import io.github.aerhakim.marimasak.models.DetailCategory;
 import io.github.aerhakim.marimasak.models.GetDetailCategory;
@@ -80,6 +83,7 @@ public class CategoryActivity extends AppCompatActivity {
 
             }
         });
+
     }
     @Override
     public void onResume() {
