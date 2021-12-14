@@ -9,7 +9,7 @@ Data yang ditampilkan di dalam aplikasi Mari Masak di ambil dari situs www.masak
 
 # Credit
 ```
-Ekik A <github.com/omorisakura> (unofficial-masakapahariini-api)
+Ekik A <github.com/tomorisakura> (unofficial-masakapahariini-api)
 GitHub Repository: https://github.com/tomorisakura/unofficial-masakapahariini-api 
 ```
 
