@@ -2,7 +2,7 @@
 Mari Masak adalah sebuah aplikasi yang berisi resep masakan dalam bahasa indonesia. Mari Masak dibuat dengan menggunakan API dari salah satu project open source yang nantinya akan saya berikan detail informasi mengenai pembuat API di bagian credit.
 Data yang ditampilkan di dalam aplikasi Mari Masak di ambil dari situs www.masakapahariini.com
 
-*) Aplikasi masah dalam tahap pengembangan!
+*) Aplikasi masih dalam tahap pengembangan!
 
 ![Mari masak](https://user-images.githubusercontent.com/79903756/146049872-bba794e1-b06a-4d68-99cf-b15cf95f188a.png)
 
