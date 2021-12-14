@@ -4,6 +4,8 @@ Data yang ditampilkan di dalam aplikasi Mari Masak di ambil dari situs www.masak
 
 *) Aplikasi masah dalam tahap pengembangan!
 
+![Mari masak](https://user-images.githubusercontent.com/79903756/146049641-7594cb23-94d8-4e15-99ac-bab86716eab1.png)
+
 # Credit
 ```
 Ekik A <github.com/omorisakura> (unofficial-masakapahariini-api)
