@@ -1,9 +1,12 @@
 package io.github.aerhakim.marimasak.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,6 +24,7 @@ import java.util.List;
 
 
 import io.github.aerhakim.marimasak.R;
+import io.github.aerhakim.marimasak.TestAPIActivity;
 import io.github.aerhakim.marimasak.adapter.CategoryAdapter;
 import io.github.aerhakim.marimasak.adapter.RecipeAdapter;
 import io.github.aerhakim.marimasak.models.Category;
@@ -32,7 +36,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
     RecyclerView recyclerView, recyclerView2;
     List<Category> categoryList;
     List<Recipe> recipeList;
@@ -43,7 +47,6 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater
                 .inflate( R.layout.fragment_home, container, false);
-
         shimmerFrameLayout1 = view.findViewById(R.id.shimmerLayout1);
         shimmerFrameLayout2 = view.findViewById(R.id.shimmerLayout2);
 
@@ -128,5 +131,19 @@ public class HomeFragment extends Fragment {
         shimmerFrameLayout1.stopShimmer();
         shimmerFrameLayout2.stopShimmer();
         super.onPause();
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        CardView newBlockButton = (CardView) getActivity().findViewById(
+                R.id.search_bar);
+        newBlockButton.setOnClickListener((View.OnClickListener) this);
+    }
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.search_bar) {
+            Intent intent = new Intent(getActivity(), TestAPIActivity.class);
+            startActivity(intent);
+        }
     }
 }

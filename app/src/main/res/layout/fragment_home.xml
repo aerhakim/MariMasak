@@ -38,21 +38,30 @@
 
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/search_bar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_margin="15dp"
                 android:elevation="30dp"
                 app:cardCornerRadius="8dp"
                 app:cardUseCompatPadding="true">
-
-                <androidx.appcompat.widget.SearchView
-                    android:id="@+id/search_bar"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="#39B8B9BB"
-                    app:defaultQueryHint="Search here..."
-                    app:iconifiedByDefault="false"
-                    app:queryBackground="@android:color/transparent" />
+                    android:text="Search here...">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:drawableLeft="@drawable/ic_baseline_search_24"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="\tSearch Here..."/>
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
 
