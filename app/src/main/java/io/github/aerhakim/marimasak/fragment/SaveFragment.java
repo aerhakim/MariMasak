@@ -1,6 +1,5 @@
 package io.github.aerhakim.marimasak.fragment;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -25,6 +24,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+import dev.shreyaspatil.MaterialDialog.MaterialDialog;
+import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface;
 import io.github.aerhakim.marimasak.R;
 import io.github.aerhakim.marimasak.activity.MainActivity;
 import io.github.aerhakim.marimasak.adapter.CategoryAdapter;
@@ -61,28 +62,31 @@ public class SaveFragment extends Fragment {
         resepAdapter.setDialog(new ResepAdapter.Dialog() {
             @Override
             public void onClick(int position) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setCancelable(true);
-                builder.setTitle("Hapus Resep");
-                builder.setMessage("Apakah anda ingin menghapus resep?");
-                builder.setNegativeButton("Batal", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        onStart();
-                    }
-                });
+                MaterialDialog mDialog = new MaterialDialog.Builder(getActivity())
+                        .setTitle("Hapus Resep?")
+                        .setMessage("Apakah anda ingin menghapus resep?")
+                        .setCancelable(false)
+                        .setPositiveButton("Hapus", R.drawable.ic_baseline_delete_24, new MaterialDialog.OnClickListener() {
 
-                builder.setPositiveButton("Hapus", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                            @Override
+                            public void onClick(dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface dialogInterface, int which) {
                                 Resep resep = list.get(position);
                                 database.resepDao().delete(resep);
                                 onStart();
-                    }
-                });
+                            }
+                        })
+                        .setNegativeButton("Batal", R.drawable.ic_baseline_close_24, new MaterialDialog.OnClickListener() {
 
-                AlertDialog dialog  = builder.create();
-                dialog.show();
+
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int which) {
+                                dialogInterface.dismiss();
+                            }
+                        })
+                        .build();
+                // Show Dialog
+                mDialog.show();
             }
         });
         recyclerView.setHasFixedSize(true);

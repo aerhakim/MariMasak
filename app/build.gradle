@@ -27,6 +27,7 @@ android {
     }
 }
 
+
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.4.0'
@@ -70,4 +71,10 @@ dependencies {
     def room_version = "2.3.0"
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    // Material Dialog Library
+    implementation 'dev.shreyaspatil.MaterialDialog:MaterialDialog:2.2.2'
+
+    // Lottie Animation Library
+    implementation 'com.airbnb.android:lottie:3.7.0'
 }
