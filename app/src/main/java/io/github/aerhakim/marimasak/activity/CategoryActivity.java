@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -70,6 +71,7 @@ public class CategoryActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<GetDetailCategory> call, Throwable t) {
+                Log.d("Hasil", t.getMessage());
             }
         });
 

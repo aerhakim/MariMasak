@@ -40,7 +40,7 @@ import retrofit2.Response;
 
 
 public class DetailResepActivity extends AppCompatActivity {
-    String key, title, thumb, kunci, times, portion, dificulty;
+    String kunci;
     LinearLayout llVisitWeb;
     NestedScrollView main;
     TextView detailJudul, detailWaktu, detailKesulitan, detailPorsi, detailDeskripsi, detailAuthor, bahan, step, itemName;

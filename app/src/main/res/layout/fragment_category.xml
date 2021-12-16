@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -74,42 +74,33 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/_120sdp"
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:layout_marginRight="@dimen/_5sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/cat_pasta"
                                 app:riv_corner_radius="8dp" />
 
-                        </RelativeLayout>
 
-                        <RelativeLayout
-                            android:id="@+id/rlQtyNo"
+                        </LinearLayout>
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp">
-
-                            <TextView
-                                android:id="@+id/tvFoodCategoryName"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="@color/primaryDark"
-                                android:textSize="@dimen/_10ssp"
-                                tools:text="Pasta" />
-                        </RelativeLayout>
+                            android:layout_margin="5dp"
+                            android:textColor="@color/black"
+                            android:text="Makan Malam"/>
 
                     </LinearLayout>
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -125,46 +116,31 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/_120sdp"
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:layout_marginRight="@dimen/_5sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:id="@+id/ivFoodCategory"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/cat_pasta"
                                 app:riv_corner_radius="8dp" />
 
-                        </RelativeLayout>
 
-                        <RelativeLayout
+                        </LinearLayout>
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginHorizontal="@dimen/_5sdp"
-                                android:ellipsize="end"
-                                android:gravity="start"
-                                android:maxLines="1"
-                                android:textAlignment="viewStart"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/_10ssp"
-                                tools:ignore="MissingPrefix"
-                                tools:text="Pasta" />
-                        </RelativeLayout>
+                            android:layout_margin="5dp"
+                            android:textColor="@color/black"
+                            android:text="Makan Siang"/>
 
                     </LinearLayout>
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
 
             <LinearLayout
@@ -172,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -188,47 +164,33 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/_120sdp"
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:layout_marginRight="@dimen/_5sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/cat_pasta"
                                 app:riv_corner_radius="8dp" />
 
-                        </RelativeLayout>
 
-                        <RelativeLayout
+                        </LinearLayout>
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginHorizontal="@dimen/_5sdp"
-                                android:ellipsize="end"
-                                android:gravity="start"
-                                android:maxLines="1"
-                                android:textAlignment="viewStart"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/_10ssp"
-                                tools:ignore="MissingPrefix"
-                                tools:text="Pasta" />
-                        </RelativeLayout>
+                            android:layout_margin="5dp"
+                            android:textColor="@color/black"
+                            android:text="Masakan Tradisional"/>
 
                     </LinearLayout>
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -244,7 +206,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/_120sdp"
                             android:layout_marginLeft="@dimen/_5sdp"
@@ -257,32 +219,18 @@
                                 android:src="@drawable/cat_pasta"
                                 app:riv_corner_radius="8dp" />
 
-                        </RelativeLayout>
 
-                        <RelativeLayout
+                        </LinearLayout>
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginHorizontal="@dimen/_5sdp"
-                                android:ellipsize="end"
-                                android:gravity="start"
-                                android:maxLines="1"
-                                android:textAlignment="viewStart"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/_10ssp"
-                                tools:ignore="MissingPrefix"
-                                tools:text="Pasta" />
-                        </RelativeLayout>
+                            android:layout_margin="5dp"
+                            android:textColor="@color/black"
+                            android:text="Masakan Hari Raya"/>
 
                     </LinearLayout>
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
 
             <LinearLayout
@@ -290,7 +238,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -306,47 +254,33 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/_120sdp"
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:layout_marginRight="@dimen/_5sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/cat_pasta"
                                 app:riv_corner_radius="8dp" />
 
-                        </RelativeLayout>
 
-                        <RelativeLayout
+                        </LinearLayout>
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginHorizontal="@dimen/_5sdp"
-                                android:ellipsize="end"
-                                android:gravity="start"
-                                android:maxLines="1"
-                                android:textAlignment="viewStart"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/_10ssp"
-                                tools:ignore="MissingPrefix"
-                                tools:text="Pasta" />
-                        </RelativeLayout>
+                            android:layout_margin="5dp"
+                            android:textColor="@color/black"
+                            android:text="Dessert"/>
 
                     </LinearLayout>
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -362,7 +296,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/_120sdp"
                             android:layout_marginLeft="@dimen/_5sdp"
@@ -375,32 +309,18 @@
                                 android:src="@drawable/cat_pasta"
                                 app:riv_corner_radius="8dp" />
 
-                        </RelativeLayout>
 
-                        <RelativeLayout
+                        </LinearLayout>
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginHorizontal="@dimen/_5sdp"
-                                android:ellipsize="end"
-                                android:gravity="start"
-                                android:maxLines="1"
-                                android:textAlignment="viewStart"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/_10ssp"
-                                tools:ignore="MissingPrefix"
-                                tools:text="Pasta" />
-                        </RelativeLayout>
+                            android:layout_margin="5dp"
+                            android:textColor="@color/black"
+                            android:text="Sarapan"/>
 
                     </LinearLayout>
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
 
             <LinearLayout
@@ -408,11 +328,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
                     android:layout_weight="3"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="1dp">
@@ -423,62 +344,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/_120sdp"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_5sdp">
-
-                            <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta"
-                                app:riv_corner_radius="8dp" />
-
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginHorizontal="@dimen/_5sdp"
-                                android:ellipsize="end"
-                                android:gravity="start"
-                                android:maxLines="1"
-                                android:textAlignment="viewStart"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/_10ssp"
-                                tools:ignore="MissingPrefix"
-                                tools:text="Pasta" />
-                        </RelativeLayout>
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_2sdp"
-                    android:layout_weight="3"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="1dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="vertical">
-
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/_120sdp"
                             android:layout_marginLeft="@dimen/_5sdp"
@@ -491,32 +357,150 @@
                                 android:src="@drawable/cat_pasta"
                                 app:riv_corner_radius="8dp" />
 
-                        </RelativeLayout>
 
-                        <RelativeLayout
+                        </LinearLayout>
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginHorizontal="@dimen/_5sdp"
-                                android:ellipsize="end"
-                                android:gravity="start"
-                                android:maxLines="1"
-                                android:textAlignment="viewStart"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/_10ssp"
-                                tools:ignore="MissingPrefix"
-                                tools:text="Pasta" />
-                        </RelativeLayout>
+                            android:layout_margin="5dp"
+                            android:textColor="@color/black"
+                            android:text="Resep Ayam"/>
 
                     </LinearLayout>
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_weight="3"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_120sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cat_pasta"
+                                app:riv_corner_radius="8dp" />
+
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="5dp"
+                            android:textColor="@color/black"
+                            android:text="Resep Sayuran"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_weight="3"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_120sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cat_pasta"
+                                app:riv_corner_radius="8dp" />
+
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="5dp"
+                            android:textColor="@color/black"
+                            android:text="Resep Daging"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_weight="3"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_120sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cat_pasta"
+                                app:riv_corner_radius="8dp" />
+
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="5dp"
+                            android:textColor="@color/black"
+                            android:text="Resep Seafood"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
