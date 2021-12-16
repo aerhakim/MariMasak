@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +44,7 @@ import retrofit2.Response;
 public class DetailResepActivity extends AppCompatActivity {
     String kunci;
     LinearLayout llVisitWeb;
+    SwipeRefreshLayout refreshLayout;
     NestedScrollView main;
     TextView detailJudul, detailWaktu, detailKesulitan, detailPorsi, detailDeskripsi, detailAuthor, bahan, step, itemName;
     ImageView detailGambar, detailItem, iv_save;
@@ -55,6 +58,7 @@ public class DetailResepActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_resep);
         shimmerFrameLayout = findViewById(R.id.shimmerLayout);
+        refreshLayout = findViewById(R.id.swipe_refresh_layout_main);
         main = findViewById(R.id.main);
         detailJudul = findViewById(R.id.tv_judul);
         detailWaktu = findViewById(R.id.tv_waktu);
@@ -82,8 +86,15 @@ public class DetailResepActivity extends AppCompatActivity {
         edkunci.setText(getIntent().getStringExtra("kunci"));
         edportion.setText(getIntent().getStringExtra("portion"));
         eddificulty.setText(getIntent().getStringExtra("dificulty"));
-        LoadData();
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshLayout.setRefreshing(false); //cegah refresh icon muncul terus
+                LoadData();
 
+            }
+        });
+        LoadData();
         database = AppDatabase.getInstance(getApplicationContext());
         iv_save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,6 +142,17 @@ public class DetailResepActivity extends AppCompatActivity {
                 Log.d("Hasil", t.getMessage());
             }
 
+        });
+
+        //Intent kembali ke MainActivity
+        RelativeLayout ivBack=findViewById(R.id.back);
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), MainActivity.class);
+                startActivity(i);
+
+            }
         });
     }
 

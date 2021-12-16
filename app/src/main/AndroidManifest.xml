@@ -19,7 +19,7 @@
             android:name=".activity.DetailResepActivity"
             android:exported="false" />
         <activity
-            android:name=".TestAPIActivity"
+            android:name=".activity.SearchActivity"
             android:exported="false" />
         <activity
             android:name=".activity.MainActivity"

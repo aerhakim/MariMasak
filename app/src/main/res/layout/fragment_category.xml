@@ -66,27 +66,23 @@
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:layout_weight="3"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="5dp"
                     app:cardElevation="1dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="@dimen/_120sdp"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_5sdp">
+                            android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta"
-                                app:riv_corner_radius="8dp" />
+                                android:src="@drawable/cat_pasta" />
 
 
                         </LinearLayout>
@@ -94,8 +90,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_margin="5dp"
-                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/primaryDark"
                             android:text="Makan Malam"/>
 
                     </LinearLayout>
@@ -108,27 +104,23 @@
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:layout_weight="3"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="5dp"
                     app:cardElevation="1dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="@dimen/_120sdp"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_5sdp">
+                            android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta"
-                                app:riv_corner_radius="8dp" />
+                                android:src="@drawable/cat_pasta" />
 
 
                         </LinearLayout>
@@ -136,8 +128,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_margin="5dp"
-                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/primaryDark"
                             android:text="Makan Siang"/>
 
                     </LinearLayout>
@@ -156,27 +148,23 @@
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:layout_weight="3"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="5dp"
                     app:cardElevation="1dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="@dimen/_120sdp"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_5sdp">
+                            android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta"
-                                app:riv_corner_radius="8dp" />
+                                android:src="@drawable/cat_pasta" />
 
 
                         </LinearLayout>
@@ -184,8 +172,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_margin="5dp"
-                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/primaryDark"
                             android:text="Masakan Tradisional"/>
 
                     </LinearLayout>
@@ -198,27 +186,22 @@
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:layout_weight="3"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="5dp"
                     app:cardElevation="1dp">
-
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="@dimen/_120sdp"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_5sdp">
+                            android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta"
-                                app:riv_corner_radius="8dp" />
+                                android:src="@drawable/cat_pasta" />
 
 
                         </LinearLayout>
@@ -226,8 +209,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_margin="5dp"
-                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/primaryDark"
                             android:text="Masakan Hari Raya"/>
 
                     </LinearLayout>
@@ -246,27 +229,23 @@
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:layout_weight="3"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="5dp"
                     app:cardElevation="1dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="@dimen/_120sdp"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_5sdp">
+                            android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta"
-                                app:riv_corner_radius="8dp" />
+                                android:src="@drawable/cat_pasta" />
 
 
                         </LinearLayout>
@@ -274,8 +253,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_margin="5dp"
-                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/primaryDark"
                             android:text="Dessert"/>
 
                     </LinearLayout>
@@ -288,27 +267,23 @@
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:layout_weight="3"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="5dp"
                     app:cardElevation="1dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="@dimen/_120sdp"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_5sdp">
+                            android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta"
-                                app:riv_corner_radius="8dp" />
+                                android:src="@drawable/cat_pasta" />
 
 
                         </LinearLayout>
@@ -316,8 +291,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_margin="5dp"
-                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/primaryDark"
                             android:text="Sarapan"/>
 
                     </LinearLayout>
@@ -336,27 +311,23 @@
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:layout_weight="3"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="5dp"
                     app:cardElevation="1dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="@dimen/_120sdp"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_5sdp">
+                            android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta"
-                                app:riv_corner_radius="8dp" />
+                                android:src="@drawable/cat_pasta" />
 
 
                         </LinearLayout>
@@ -364,8 +335,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_margin="5dp"
-                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/primaryDark"
                             android:text="Resep Ayam"/>
 
                     </LinearLayout>
@@ -378,27 +349,22 @@
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:layout_weight="3"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="5dp"
                     app:cardElevation="1dp">
-
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="@dimen/_120sdp"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_5sdp">
+                            android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta"
-                                app:riv_corner_radius="8dp" />
+                                android:src="@drawable/cat_pasta" />
 
 
                         </LinearLayout>
@@ -406,8 +372,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_margin="5dp"
-                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/primaryDark"
                             android:text="Resep Sayuran"/>
 
                     </LinearLayout>
@@ -426,27 +392,23 @@
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:layout_weight="3"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="5dp"
                     app:cardElevation="1dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="@dimen/_120sdp"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_5sdp">
+                            android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta"
-                                app:riv_corner_radius="8dp" />
+                                android:src="@drawable/cat_pasta" />
 
 
                         </LinearLayout>
@@ -454,8 +416,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_margin="5dp"
-                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/primaryDark"
                             android:text="Resep Daging"/>
 
                     </LinearLayout>
@@ -468,27 +430,22 @@
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:layout_weight="3"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="5dp"
                     app:cardElevation="1dp">
-
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="@dimen/_120sdp"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_5sdp">
+                            android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta"
-                                app:riv_corner_radius="8dp" />
+                                android:src="@drawable/cat_pasta" />
 
 
                         </LinearLayout>
@@ -496,8 +453,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_margin="5dp"
-                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/primaryDark"
                             android:text="Resep Seafood"/>
 
                     </LinearLayout>

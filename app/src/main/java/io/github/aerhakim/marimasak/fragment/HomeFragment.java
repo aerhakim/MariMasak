@@ -3,13 +3,11 @@ package io.github.aerhakim.marimasak.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.widget.SearchView;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -24,7 +22,7 @@ import java.util.List;
 
 
 import io.github.aerhakim.marimasak.R;
-import io.github.aerhakim.marimasak.TestAPIActivity;
+import io.github.aerhakim.marimasak.activity.SearchActivity;
 import io.github.aerhakim.marimasak.adapter.CategoryAdapter;
 import io.github.aerhakim.marimasak.adapter.RecipeAdapter;
 import io.github.aerhakim.marimasak.models.Category;
@@ -41,7 +39,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     List<Category> categoryList;
     List<Recipe> recipeList;
     ShimmerFrameLayout shimmerFrameLayout1, shimmerFrameLayout2;
-
+    SwipeRefreshLayout refreshLayout;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -49,44 +47,31 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 .inflate( R.layout.fragment_home, container, false);
         shimmerFrameLayout1 = view.findViewById(R.id.shimmerLayout1);
         shimmerFrameLayout2 = view.findViewById(R.id.shimmerLayout2);
-
+        refreshLayout = view.findViewById(R.id.swipe_refresh_layout_main);
         //rv trending recipe
         recyclerView=view.findViewById(R.id.rv_main);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
-
-        Call<GetRecipe> call= Config.getInstance().getApi().recipe();
-        call.enqueue(new Callback<GetRecipe>() {
-            @Override
-            public void onResponse(Call<GetRecipe> call, Response<GetRecipe> response) {
-
-                if(response.isSuccessful()){
-
-                    recipeList =response.body().getRecipeList();
-                    recyclerView.setAdapter(new RecipeAdapter(getActivity(), recipeList));
-                    shimmerFrameLayout1.startShimmer();
-                    shimmerFrameLayout1.setVisibility(View.GONE);
-                    recyclerView.setVisibility(View.VISIBLE);
-
-                }
-                else{
-                    shimmerFrameLayout1.startShimmer();
-                    Toast.makeText(getActivity(), response.body().getError(), Toast.LENGTH_SHORT).show();
-                }
-
-            }
-
-            @Override
-            public void onFailure(Call<GetRecipe> call, Throwable t) {
-                Log.d("Hasil", t.getMessage());
-            }
-        });
-
-        //rv category
-        //rv trending recipe
+        //rv trending category
         recyclerView2=view.findViewById(R.id.rv_cat);
         recyclerView2.setHasFixedSize(true);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshLayout.setRefreshing(false); //cegah refresh icon muncul terus
+                getData();
+
+            }
+        });
+
+        getData();
+        return view;
+    }
+
+
+    public void getData(){
 
         Call<GetCategory> call2= Config.getInstance().getApi().categories();
         call2.enqueue(new Callback<GetCategory>() {
@@ -115,10 +100,35 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             public void onFailure(Call<GetCategory> call, Throwable t) {
             }
         });
-        return view;
+
+
+        Call<GetRecipe> call= Config.getInstance().getApi().recipe();
+        call.enqueue(new Callback<GetRecipe>() {
+            @Override
+            public void onResponse(Call<GetRecipe> call, Response<GetRecipe> response) {
+
+                if(response.isSuccessful()){
+
+                    recipeList =response.body().getRecipeList();
+                    recyclerView.setAdapter(new RecipeAdapter(getActivity(), recipeList));
+                    shimmerFrameLayout1.startShimmer();
+                    shimmerFrameLayout1.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.VISIBLE);
+
+                }
+                else{
+                    shimmerFrameLayout1.startShimmer();
+                    Toast.makeText(getActivity(), response.body().getError(), Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<GetRecipe> call, Throwable t) {
+                Log.d("Hasil", t.getMessage());
+            }
+        });
     }
-
-
     @Override
     public void onResume() {
         shimmerFrameLayout1.startShimmer();
@@ -142,7 +152,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.search_bar) {
-            Intent intent = new Intent(getActivity(), TestAPIActivity.class);
+            Intent intent = new Intent(getActivity(), SearchActivity.class);
             startActivity(intent);
         }
     }

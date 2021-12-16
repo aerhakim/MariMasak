@@ -74,6 +74,7 @@ public class SaveFragment extends Fragment {
                                 Resep resep = list.get(position);
                                 database.resepDao().delete(resep);
                                 onStart();
+                                dialogInterface.dismiss();
                             }
                         })
                         .setNegativeButton("Batal", R.drawable.ic_baseline_close_24, new MaterialDialog.OnClickListener() {

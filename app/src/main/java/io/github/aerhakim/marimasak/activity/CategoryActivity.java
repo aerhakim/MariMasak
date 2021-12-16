@@ -2,8 +2,10 @@ package io.github.aerhakim.marimasak.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,8 +38,10 @@ public class CategoryActivity extends AppCompatActivity {
     TextView tvInfo, namaCat;
     String key;
     String name;
+    SwipeRefreshLayout refreshLayout;
     List<DetailCategory> detailCategoryList;
     ShimmerFrameLayout shimmerFrameLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,19 +51,48 @@ public class CategoryActivity extends AppCompatActivity {
         name = getIntent().getStringExtra("name");
         tvInfo = findViewById(R.id.tvInfo);
         namaCat = findViewById(R.id.namaCat);
-        tvInfo.setText("Dibawah ini adalah 20 list masakan dari kategori "+name);
+        refreshLayout = findViewById(R.id.swipe_refresh_layout_main);
+        tvInfo.setText("Dibawah ini adalah 20 list masakan dari kategori " + name);
         namaCat.setText(name);
         //rv trending recipe
-        recyclerView=findViewById(R.id.rv_detail_category);
+        recyclerView = findViewById(R.id.rv_detail_category);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(CategoryActivity.this, LinearLayoutManager.VERTICAL, false));
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshLayout.setRefreshing(false); //cegah refresh icon muncul terus
+                loadData();
+            }
+        });
+        loadData();
+        //Intent kembali ke MainActivity
+        Toolbar ivBack = findViewById(R.id.ivBack);
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
+        //Intent ke Search Activity
+        CardView searchBar = findViewById(R.id.search_bar);
+        searchBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), SearchActivity.class);
+                startActivity(i);
+            }
+        });
+    }
 
-        Call<GetDetailCategory> call= Config.getInstance().getApi().detailcategory(key);
+    public void loadData() {
+        Call<GetDetailCategory> call = Config.getInstance().getApi().detailcategory(key);
         call.enqueue(new Callback<GetDetailCategory>() {
             @Override
             public void onResponse(Call<GetDetailCategory> call, Response<GetDetailCategory> response) {
 
-                if(response.isSuccessful()){
+                if (response.isSuccessful()) {
                     detailCategoryList = response.body().getDetailCategoryList();
                     recyclerView.setAdapter(new DetailCategoryAdapter(CategoryActivity.this, detailCategoryList));
                     shimmerFrameLayout.startShimmer();
@@ -74,19 +107,8 @@ public class CategoryActivity extends AppCompatActivity {
                 Log.d("Hasil", t.getMessage());
             }
         });
-
-        //Intent kembali ke MainActivity
-        Toolbar ivBack=findViewById(R.id.ivBack);
-        ivBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), MainActivity.class);
-                startActivity(i);
-
-            }
-        });
-
     }
+
     @Override
     public void onResume() {
         shimmerFrameLayout.startShimmer();

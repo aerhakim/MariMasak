@@ -9,7 +9,10 @@ import android.os.Bundle;
 
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
+import dev.shreyaspatil.MaterialDialog.MaterialDialog;
+import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface;
 import io.github.aerhakim.marimasak.R;
+import io.github.aerhakim.marimasak.database.Resep;
 import io.github.aerhakim.marimasak.fragment.CategoryFragment;
 import io.github.aerhakim.marimasak.fragment.HomeFragment;
 import io.github.aerhakim.marimasak.fragment.SaveFragment;
@@ -48,5 +51,34 @@ public class MainActivity extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        MaterialDialog mDialog = new MaterialDialog.Builder(this)
+                .setTitle("Ingin Keluar?")
+                .setMessage("Apakah Anda ingin keluar dari Mari Masak?")
+                .setCancelable(false)
+                .setPositiveButton("Keluar", R.drawable.ic_baseline_exit_to_app_24, new MaterialDialog.OnClickListener() {
+
+
+                    @Override
+                    public void onClick(dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface dialogInterface, int which) {
+                        MainActivity.super.onBackPressed();
+                    }
+                })
+                .setNegativeButton("Batal", R.drawable.ic_baseline_close_24, new MaterialDialog.OnClickListener() {
+
+
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        dialogInterface.dismiss();
+                    }
+                })
+                .build();
+        // Show Dialog
+        mDialog.show();
+
     }
 }
