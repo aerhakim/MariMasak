@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -42,7 +43,7 @@ public class ResepAdapter extends RecyclerView.Adapter<ResepAdapter.ViewAdapter>
     @NonNull
     @Override
     public ViewAdapter onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cover_category_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cover_favourite_item, parent, false);
         return new ViewAdapter(view);
     }
 
@@ -80,6 +81,7 @@ public class ResepAdapter extends RecyclerView.Adapter<ResepAdapter.ViewAdapter>
     class ViewAdapter extends RecyclerView.ViewHolder{
         TextView recipeKey,resicePortion, recipeTitle, recipeTimes, recipeDifficulty;
         ImageView recipeThumb;
+        LinearLayout recipeDelete;
 
         public ViewAdapter(@NonNull View itemView) {
             super(itemView);
@@ -89,7 +91,9 @@ public class ResepAdapter extends RecyclerView.Adapter<ResepAdapter.ViewAdapter>
             recipeTimes=itemView.findViewById(R.id.tv_waktu);
             recipeDifficulty=itemView.findViewById(R.id.tv_kesulitan);
             recipeThumb=itemView.findViewById(R.id.iv_cover);
-            itemView.setOnClickListener(new View.OnClickListener() {
+            recipeDelete=itemView.findViewById(R.id.iv_delete);
+
+            recipeDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (dialog!=null){

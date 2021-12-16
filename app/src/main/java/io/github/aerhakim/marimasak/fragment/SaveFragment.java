@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,7 @@ import java.util.List;
 
 
 import io.github.aerhakim.marimasak.R;
+import io.github.aerhakim.marimasak.activity.MainActivity;
 import io.github.aerhakim.marimasak.adapter.CategoryAdapter;
 import io.github.aerhakim.marimasak.adapter.RecipeAdapter;
 import io.github.aerhakim.marimasak.database.AppDatabase;
@@ -44,7 +46,7 @@ public class SaveFragment extends Fragment {
     private AppDatabase database;
     private ResepAdapter resepAdapter;
     private List<Resep> list = new ArrayList<>();
-
+    private AlertDialog.Builder dialog;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -56,11 +58,44 @@ public class SaveFragment extends Fragment {
         list.clear();
         list.addAll(database.resepDao().getAll());
         resepAdapter = new ResepAdapter(getActivity().getApplicationContext(), list);
+        resepAdapter.setDialog(new ResepAdapter.Dialog() {
+            @Override
+            public void onClick(int position) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setCancelable(true);
+                builder.setTitle("Hapus Resep");
+                builder.setMessage("Apakah anda ingin menghapus resep?");
+                builder.setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        onStart();
+                    }
+                });
+
+                builder.setPositiveButton("Hapus", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                                Resep resep = list.get(position);
+                                database.resepDao().delete(resep);
+                                onStart();
+                    }
+                });
+
+                AlertDialog dialog  = builder.create();
+                dialog.show();
+            }
+        });
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(resepAdapter);
 
         return view;
     }
-
+    @Override
+    public void onStart() {
+        super.onStart();
+        list.clear();
+        list.addAll(database.resepDao().getAll());
+        resepAdapter.notifyDataSetChanged();
+    }
 }

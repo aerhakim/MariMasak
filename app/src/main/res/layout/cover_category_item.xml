@@ -77,16 +77,6 @@
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/iv_save"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="top"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="10dp"
-                android:tint="@color/white"
-                android:src="@drawable/ic_favourite" />
         </LinearLayout>
 
         <LinearLayout
