@@ -288,7 +288,7 @@
                         android:id="@+id/tv_deskripsi"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_margin="5dp"
                         android:text="Panganan kaki lima malam hari di Indonesia biasanya bertarung antara nasi goreng, capcay, mie, ataupun kwetiau. Mana yang jadi favoritmu? Kali ini, aku ingin berbagi satu resep kwetiau goreng khas Medan yang punya topping lengkap, tapi tidak sulit untuk membuatnya.Yang menjadi penentu keunikannya adalah penggunaan telur bebek dan bumbu kwetiau goreng lainnya yang menjadikan rasanya terasa otentik. Misalnya saja kehadiran kucai, minyak wijen, serta tentunya bakso ikan serta udang. Gunakan kwetiau basah dan siapkan telur orak arik yang menggunakan telur bebek tadi. Selebihnya cara buat kwetiau goreng pada dasaranya adalah menumis dengan cara yang sudah kita kenal. Masukkan semua bahan, tambahkan kucai dan taoge di saat-saat terakhir. Selesai sudah masakan kwetiau goreng ini, deh!Bicara soal teman-temannya, aku juga banyak berbagi macam-macam nasi goreng, mie goreng, dan bahkan resep bakso di MAHI. Setelah resep kwetiau goreng a la restoran ini, pastikan untuk mencoba resep lainnya kapan-kapan, ya! Jangan lupa juga untuk follow, like, dan jika ada pertanyaan atau ingin request resep, kamu bisa langsung bertanya di kolom komentar akun Instagram Masak Apa Hari Ini."
                         android:textColor="@color/gray"
                         android:textSize="14sp" />
@@ -306,54 +306,10 @@
                         android:id="@+id/tv_bahan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_margin="5dp"
                         android:text="Bahan-Bahan yg harus disiapkan"
-                        android:textColor="@color/gray"
+                        android:textColor="@color/primary"
                         android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Bahan Khusus"
-                        android:textColor="@color/soft_purple"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="7dp"
-                        app:cardElevation="3dp"
-                        app:cardUseCompatPadding="true">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:padding="15dp">
-
-                            <ImageView
-                                android:id="@+id/thumb_item"
-                                android:layout_width="0dp"
-                                android:layout_height="70dp"
-                                android:layout_marginEnd="20dp"
-                                android:layout_weight="1"
-                                android:adjustViewBounds="true"
-                                android:src="@drawable/basket" />
-
-                            <TextView
-                                android:id="@+id/name_item"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="2"
-                                android:text="Kecap Manis"
-                                android:textColor="@color/primaryDark"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -368,11 +324,17 @@
                         android:id="@+id/tv_step"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_margin="5dp"
                         android:text="Dibawah ini adalah step pembuatan"
-                        android:textColor="@color/gray"
+                        android:textColor="@color/primary"
                         android:textSize="14sp" />
 
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
                     <EditText
                         android:id="@id/title"
                         android:layout_width="match_parent"
@@ -408,6 +370,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:visibility="gone" />
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
             </LinearLayout>

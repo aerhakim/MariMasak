@@ -28,17 +28,28 @@ public class Results {
     @SerializedName("desc")
     @Expose
     private String desc;
-//    @SerializedName("needItem")
-//    @Expose
-//    NeedItem needItem = null;
-//    @SerializedName("ingredient")
-//    @Expose
-//    Ingredient ingredient = null;
-//
-//    @SerializedName("step")
-//    @Expose
-//    Step step = null;
 
+    @SerializedName("step")
+    List<String> step = null;
+
+    @SerializedName("ingredient")
+    List<String> ingredient = null;
+
+    public List<String> getStep() {
+        return step;
+    }
+
+    public void setStep(List<String> step) {
+        this.step = step;
+    }
+
+    public List<String> getIngredient() {
+        return ingredient;
+    }
+
+    public void setIngredient(List<String> ingredient) {
+        this.ingredient = ingredient;
+    }
 
     public String getTitle() {
         return title;
@@ -87,30 +98,6 @@ public class Results {
     public void setDesc(String desc) {
         this.desc = desc;
     }
-
-//    public NeedItem getNeedItem() {
-//        return needItem;
-//    }
-//
-//    public void setNeedItem(NeedItem needItem) {
-//        this.needItem = needItem;
-//    }
-
-//    public Ingredient getIngredient() {
-//        return ingredient;
-//    }
-//
-//    public void setIngredient(Ingredient ingredient) {
-//        this.ingredient = ingredient;
-//    }
-//
-//    public Step getStep() {
-//        return step;
-//    }
-//
-//    public void setStep(Step step) {
-//        this.step = step;
-//    }
 
     public Author getAuthor() {
         return author;

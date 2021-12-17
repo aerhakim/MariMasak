@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import androidx.core.widget.NestedScrollView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
@@ -24,16 +22,11 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.facebook.shimmer.ShimmerFrameLayout;
-import com.squareup.picasso.Picasso;
 
-import java.security.PublicKey;
-import java.util.Arrays;
-import java.util.List;
-
+import dev.shreyaspatil.MaterialDialog.MaterialDialog;
+import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface;
 import io.github.aerhakim.marimasak.R;
-import io.github.aerhakim.marimasak.adapter.RecipeAdapter;
 import io.github.aerhakim.marimasak.database.AppDatabase;
-import io.github.aerhakim.marimasak.models.Category;
 import io.github.aerhakim.marimasak.models.ResultsResponse;
 import io.github.aerhakim.marimasak.utils.api.Config;
 import retrofit2.Call;
@@ -46,7 +39,7 @@ public class DetailResepActivity extends AppCompatActivity {
     LinearLayout llVisitWeb;
     SwipeRefreshLayout refreshLayout;
     NestedScrollView main;
-    TextView detailJudul, detailWaktu, detailKesulitan, detailPorsi, detailDeskripsi, detailAuthor, bahan, step, itemName;
+    TextView detailJudul, detailWaktu, detailKesulitan, detailPorsi, detailDeskripsi, detailAuthor, itemName, detailBahan, detailStep;
     ImageView detailGambar, detailItem, iv_save;
     ShimmerFrameLayout shimmerFrameLayout;
     EditText edtitle, edthumb, edkunci, edtimes, edportion, eddificulty;
@@ -64,10 +57,10 @@ public class DetailResepActivity extends AppCompatActivity {
         detailWaktu = findViewById(R.id.tv_waktu);
         detailKesulitan = findViewById(R.id.tv_kesulitan);
         detailPorsi = findViewById(R.id.tv_porsi);
+        detailBahan = findViewById(R.id.tv_bahan);
+        detailStep = findViewById(R.id.tv_step);
         detailDeskripsi = findViewById(R.id.tv_deskripsi);
         detailGambar = findViewById(R.id.iv_detail);
-        detailItem = findViewById(R.id.thumb_item);
-        itemName = findViewById(R.id.name_item);
         edtimes = findViewById(R.id.times);
         edthumb = findViewById(R.id.thumb);
         edkunci = findViewById(R.id.kunci);
@@ -77,8 +70,6 @@ public class DetailResepActivity extends AppCompatActivity {
         iv_save = findViewById(R.id.iv_save);
         detailAuthor = findViewById(R.id.tv_author);
         llVisitWeb = findViewById(R.id.btn_visit_web);
-        bahan = findViewById(R.id.tv_bahan);
-        step = findViewById(R.id.tv_step);
         edtitle.setText(getIntent().getStringExtra("title"));
         edtimes.setText(getIntent().getStringExtra("times"));
         edthumb.setText(getIntent().getStringExtra("thumb"));
@@ -117,7 +108,10 @@ public class DetailResepActivity extends AppCompatActivity {
                 detailKesulitan.setText(response.body().getResults().getDificulty());
                 detailPorsi.setText(response.body().getResults().getServings());
                 detailDeskripsi.setText(response.body().getResults().getDesc());
-                detailDeskripsi.setText(response.body().getResults().getDesc());
+                String ingredient= String.join("\n",response.body().getResults().getIngredient());;
+                String step= String.join("\n\n",response.body().getResults().getStep());;
+                detailBahan.setText(ingredient);
+                detailStep.setText(step);
                 detailAuthor.setText(response.body().getResults().getAuthor().getUser());
                 Glide.with(DetailResepActivity.this)
                         .load(response.body().getResults().getThumb())
@@ -139,21 +133,24 @@ public class DetailResepActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResultsResponse> call, Throwable t) {
-                Log.d("Hasil", t.getMessage());
+                Log.e("Hasil", t.getMessage());
             }
 
         });
 
-        //Intent kembali ke MainActivity
+        //Intent kembali ke activity sebelumnya
         RelativeLayout ivBack=findViewById(R.id.back);
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), MainActivity.class);
-                startActivity(i);
-
+                finish();
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        finish();
+
     }
 
 }

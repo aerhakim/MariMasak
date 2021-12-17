@@ -120,4 +120,9 @@ public class CategoryActivity extends AppCompatActivity {
         shimmerFrameLayout.stopShimmer();
         super.onPause();
     }
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
 }
