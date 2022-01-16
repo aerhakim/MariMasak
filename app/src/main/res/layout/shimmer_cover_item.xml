@@ -57,9 +57,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:background="@drawable/bg_shimmer"
             android:orientation="horizontal">
@@ -102,13 +102,14 @@
                 android:text="30 Mins"
                 android:textColor="@color/shimmer_placeholder"
                 android:textSize="10sp" />
+
             <TextView
                 android:id="@+id/tv_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="id"
-                android:visibility="gone"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                android:visibility="gone" />
 
 
             <TextView

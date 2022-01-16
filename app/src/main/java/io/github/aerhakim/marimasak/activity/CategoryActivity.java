@@ -52,7 +52,7 @@ public class CategoryActivity extends AppCompatActivity {
         tvInfo = findViewById(R.id.tvInfo);
         namaCat = findViewById(R.id.namaCat);
         refreshLayout = findViewById(R.id.swipe_refresh_layout_main);
-        tvInfo.setText("Dibawah ini adalah 20 list masakan dari kategori " + name);
+        tvInfo.setText("Dibawah ini adalah 10 list resep pilihan dari kategori " + name);
         namaCat.setText(name);
         //rv trending recipe
         recyclerView = findViewById(R.id.rv_detail_category);

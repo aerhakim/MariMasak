@@ -7,7 +7,8 @@
     android:layout_marginLeft="7dp"
     android:layout_marginRight="7dp"
     android:layout_marginBottom="?attr/actionBarSize"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".fragment.CategoryFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -19,8 +20,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/ivBack"
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            app:navigationIcon="@drawable/ic_backk">
+            android:layout_height="?actionBarSize">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                     android:id="@+id/namaCat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
+
                     android:layout_centerInParent="true"
                     android:text="Category"
                     android:textColor="@color/primaryDark"
@@ -79,10 +79,10 @@
                             android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_120sdp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta" />
+                                android:src="@drawable/makanmalam" />
 
 
                         </LinearLayout>
@@ -98,6 +98,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/makansiang"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -117,10 +118,10 @@
                             android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_120sdp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta" />
+                                android:src="@drawable/makansiang" />
 
 
                         </LinearLayout>
@@ -142,6 +143,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/makanantradisional"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -161,10 +163,10 @@
                             android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_120sdp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta" />
+                                android:src="@drawable/masakantradisional" />
 
 
                         </LinearLayout>
@@ -180,6 +182,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/masakanhariraya"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -198,10 +201,10 @@
                             android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_120sdp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta" />
+                                android:src="@drawable/masakanhariraya" />
 
 
                         </LinearLayout>
@@ -223,6 +226,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/makanandesert"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -242,10 +246,10 @@
                             android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_120sdp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta" />
+                                android:src="@drawable/makanandessert" />
 
 
                         </LinearLayout>
@@ -261,6 +265,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/makanansarapan"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -280,10 +285,10 @@
                             android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_120sdp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta" />
+                                android:src="@drawable/makanansarapan" />
 
 
                         </LinearLayout>
@@ -305,6 +310,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/makananayam"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -324,10 +330,10 @@
                             android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_120sdp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta" />
+                                android:src="@drawable/masakanayam" />
 
 
                         </LinearLayout>
@@ -343,6 +349,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/masakansayuran"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -361,10 +368,10 @@
                             android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_120sdp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta" />
+                                android:src="@drawable/masakansayuran" />
 
 
                         </LinearLayout>
@@ -386,6 +393,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/makanandaging"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -405,10 +413,10 @@
                             android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_120sdp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta" />
+                                android:src="@drawable/masakandaging" />
 
 
                         </LinearLayout>
@@ -424,6 +432,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/seafood"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -442,10 +451,10 @@
                             android:layout_height="@dimen/_120sdp">
 
                             <com.makeramen.roundedimageview.RoundedImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_120sdp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cat_pasta" />
+                                android:src="@drawable/makananseafood" />
 
 
                         </LinearLayout>

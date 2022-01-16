@@ -11,7 +11,7 @@
         android:layout_alignParentEnd="true"
         android:layout_centerInParent="true"
         app:riv_oval="true"
-        android:src="@drawable/foto" />
+        android:src="@drawable/basket" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hallo, AR Hakim"
+            android:text="Halo, "
             android:textColor="@color/primary"
             android:textSize="26sp"
             android:textStyle="bold" />

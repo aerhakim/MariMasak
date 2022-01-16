@@ -16,9 +16,5 @@
         android:icon="@drawable/ic_favourite"
         android:title="Favourite"
         app:cnb_iconColor="@color/primaryDark" />
-    <item
-        android:id="@+id/setting"
-        android:icon="@drawable/ic_settings"
-        android:title="Setting"
-        app:cnb_iconColor="@color/primaryDark" />
+
 </menu>

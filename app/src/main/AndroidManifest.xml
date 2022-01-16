@@ -12,9 +12,7 @@
         android:screenOrientation="portrait"
         android:supportsRtl="false"
         android:theme="@style/Theme.MariMasak">
-        <activity
-            android:name=".test.TestActivity"
-            android:exported="false" />
+
         <activity
             android:name=".activity.CategoryActivity"
             android:exported="false" />

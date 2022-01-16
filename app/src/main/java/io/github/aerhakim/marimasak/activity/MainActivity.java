@@ -2,9 +2,7 @@ package io.github.aerhakim.marimasak.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
@@ -12,11 +10,9 @@ import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 import dev.shreyaspatil.MaterialDialog.MaterialDialog;
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface;
 import io.github.aerhakim.marimasak.R;
-import io.github.aerhakim.marimasak.database.Resep;
 import io.github.aerhakim.marimasak.fragment.CategoryFragment;
 import io.github.aerhakim.marimasak.fragment.HomeFragment;
 import io.github.aerhakim.marimasak.fragment.SaveFragment;
-import io.github.aerhakim.marimasak.fragment.SettingFragment;
 
 public class MainActivity extends AppCompatActivity {
     ChipNavigationBar chipNavigationBar;
@@ -44,9 +40,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.favourite:
                         fragment = new SaveFragment();
                         break;
-                    case R.id.setting:
-                        fragment = new SettingFragment();
-                        break;
+
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
             }

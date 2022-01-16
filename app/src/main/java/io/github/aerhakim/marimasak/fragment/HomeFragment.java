@@ -133,6 +133,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onResume() {
         shimmerFrameLayout1.startShimmer();
         shimmerFrameLayout2.startShimmer();
+        getData();
         super.onResume();
     }
 
