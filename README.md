@@ -11,6 +11,7 @@ Data yang ditampilkan di dalam aplikasi Mari Masak di ambil dari situs www.masak
 ```
 Ekik A <github.com/tomorisakura> (unofficial-masakapahariini-api)
 GitHub Repository: https://github.com/tomorisakura/unofficial-masakapahariini-api 
+Inspirasi UI: https://dribbble.com/shots/15295362-Food-Recipe-App
 ```
 
 # License
